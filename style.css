@@ -1,92 +1,91 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #87CEEB;
-    font-family: Arial, sans-serif;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .timer-box {
-    width: 350px;
-    height: 350px;
-    background-color: white;
-    border-radius: 20px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
-  }
-  
-  .timer-header {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .timer-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: #f0f0f0;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: background-color 0.3s;
-  }
-  
-  .timer-button.active {
-    background-color: #1e90ff;
-    color: white;
-  }
-  
-  .timer-display {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #333;
-  }
-  
-  .timer-controls {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .control-button {
-    padding: 10px;
-    background-color: #f0f0f0;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .control-button:hover {
-    background-color: #1e90ff;
-    color: white;
-  }
-  
-  .session-log {
-    position: absolute;
-    top: 10px;
-    right: -180px;
-    width: 160px;
-    font-size: 0.9rem;
-    color: #333;
-  }
-  
-  #log-list {
-    list-style-type: none;
-    padding-left: 0;
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #87CEEB;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-box {
+  width: 350px;
+  height: 350px;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+
+.timer-header {
+  display: flex;
+  gap: 10px;
+}
+
+.timer-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: #f0f0f0;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.timer-button.active {
+  background-color: #1e90ff;
+  color: white;
+}
+
+.timer-display {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.timer-controls {
+  display: flex;
+  gap: 15px;
+}
+
+.control-button {
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.control-button:hover {
+  background-color: #1e90ff;
+  color: white;
+}
+
+.session-log {
+  position: absolute;
+  top: 10px;
+  right: -180px;
+  width: 160px;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+#log-list {
+  list-style-type: none;
+  padding-left: 0;
+}

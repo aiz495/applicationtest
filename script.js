@@ -7,6 +7,7 @@ let sessionLog = []; // To store the log of sessions
 
 const timeDisplay = document.getElementById('time');
 const startButton = document.getElementById('start');
+const stopButton = document.getElementById('stop');
 const resetButton = document.getElementById('reset');
 const pomodoroButton = document.getElementById('pomodoro');
 const shortBreakButton = document.getElementById('short-break');
@@ -39,6 +40,11 @@ function startTimer() {
       updateTimeDisplay();
     }
   }, 1000);
+}
+
+function stopTimer() {
+  clearInterval(timer);
+  isRunning = false;
 }
 
 function resetTimer() {
@@ -99,6 +105,7 @@ shortBreakButton.addEventListener('click', () => setMode('short-break'));
 longBreakButton.addEventListener('click', () => setMode('long-break'));
 
 startButton.addEventListener('click', startTimer);
+stopButton.addEventListener('click', stopTimer);
 resetButton.addEventListener('click', resetTimer);
 
 window.onload = resetTimer;
