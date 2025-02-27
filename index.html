@@ -1,34 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Pomodoro Timer</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <!-- ヘッダー部分（サイト上部ナビゲーションバー） -->
+  <header class="header">
+    <div class="logo">My Pomodoro</div>
+    <nav class="nav-menu">
+      <!-- Reportボタンを設置 -->
+      <button id="reportBtn" class="nav-button">Report</button>
+      <button class="nav-button">Setting</button>
+      <button class="nav-button">Sign In</button>
+    </nav>
+  </header>
+
   <div class="container">
     <div class="timer-box">
+      <!-- モード切替ボタン -->
       <div class="timer-header">
-        <button class="timer-button active" id="pomodoro">pomodoro</button>
-        <button class="timer-button" id="short-break">short break</button>
-        <button class="timer-button" id="long-break">long break</button>
+        <button class="timer-button active" id="pomodoro">Pomodoro</button>
+        <button class="timer-button" id="short-break">Short Break</button>
+        <button class="timer-button" id="long-break">Long Break</button>
       </div>
-      <div class="timer-display" id="time">
-        25:00
-      </div>
+
+      <!-- カウントダウン表示 -->
+      <div class="timer-display" id="time">25:00</div>
+
+      <!-- タイマー操作ボタン -->
       <div class="timer-controls">
-        <button id="start" class="control-button">start</button>
-        <button id="stop" class="control-button">stop</button>
-        <button id="reset" class="control-button">reset</button>
+        <button id="start" class="control-button">Start</button>
+        <button id="stop" class="control-button">Stop</button>
+        <button id="reset" class="control-button">Reset</button>
       </div>
+
+      <!-- セッションログ -->
       <div class="session-log" id="session-log">
         <h3>Session Log</h3>
         <ul id="log-list"></ul>
       </div>
     </div>
   </div>
+
+  <!-- Report画面用モーダル（または別ページ風コンテナ） -->
+  <div class="modal-overlay" id="reportModal">
+    <div class="modal-content">
+      <span id="closeReport" class="close-button">&times;</span>
+      <h2>Activity Summary</h2>
+      <div class="summary-container">
+        <div class="summary-box">
+          <p class="summary-title">Hours Focused</p>
+          <p id="hoursFocused">--</p>
+        </div>
+        <div class="summary-box">
+          <p class="summary-title">Days Accessed</p>
+          <p id="daysAccessed">--</p>
+        </div>
+        <div class="summary-box">
+          <p class="summary-title">Day Streak</p>
+          <p id="dayStreak">--</p>
+        </div>
+      </div>
+
+      <h2>Focus Hours (Last 7 Days)</h2>
+      <canvas id="focusChart" width="300" height="150" style="background: #fff;"></canvas>
+      <p class="note">※簡易的なサンプルです。ログイン機能は実装していません。</p>
+    </div>
+  </div>
+
+  <!-- 音声ファイル -->
   <audio id="bell-sound" src="bell.mp3" preload="auto"></audio>
+
+  <!-- スクリプト -->
   <script src="script.js"></script>
 </body>
 </html>
